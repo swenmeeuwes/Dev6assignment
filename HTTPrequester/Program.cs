@@ -12,21 +12,20 @@ namespace HTTPrequester
     {
         static void Main(string[] args)
         {
-            //string url = "http://145.24.222.160/DataFlowWebservice/api/positions?unitid=357566000058106";
-            foreach (var item in args)
-            {
-                Console.WriteLine(item);
-            }
+            //try
+            //{
+            //    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(args[0]);
 
-            Console.ReadLine();
+            //    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-            //HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            //    Console.WriteLine("Response status code: {0}.", response.StatusCode);
 
-            //HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            //Stream resStream = response.GetResponseStream();
-
-            //Console.WriteLine(resStream.Length);
+            //    return response;
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine("Could not establish a connection");
+            //}
         }
     }
 }
