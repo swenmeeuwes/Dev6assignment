@@ -48,8 +48,8 @@ goto:while
 
 :commit
 echo Committing...
-%git_location%Git add *
-%git_location%Git commit -a -m "Commit from AutoDeploy.bat on %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%"
+%git_location%Git add * >> %log%
+%git_location%Git commit -a -m "Commit from AutoDeploy.bat on %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%" >> %log%
 goto:while
 
 :install-dependencies
