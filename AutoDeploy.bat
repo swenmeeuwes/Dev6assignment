@@ -1,6 +1,5 @@
 :: Name:     	AutoDeploy.bat
-:: Purpose:  	
-:: Author:   	Swen Meeuwes
+:: Author:   	Swen Meeuwes, 0887127
 
 @echo off
 
@@ -28,8 +27,10 @@ echo AutoDeploy.bat Log > %log%
 echo %time:~0,8% %date% >> %log%
 echo ---------------------------------------------- >> %log%
 
+:: If no parameters are passed, show mercy.. uhh help
 if "%1"=="" goto:help
 
+:: Checks each parameter
 :while
 shift
 if "%0"=="/a" goto:analyse
