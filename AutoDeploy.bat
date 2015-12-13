@@ -5,11 +5,11 @@
 @echo off
 
 :: CONFIG
-SET webservice_url="http://145.24.222.160/DataFlowWebservice/api/positions?unitid=357566000058106"
 SET msbuild_location="C:\Windows\Microsoft.NET\Framework\v4.0.30319\"
 SET solution_location="HTTPrequester.sln"
 SET nuget_location="%~dp0\"
 SET mstest_location="D:\MicrosoftVisualStudio\Common7\IDE\"
+SET git_location="C:\Program Files (x86)\Git\bin\"
 SET artifacts_dir="artifacts"
 SET dependencies=Newtonsoft.Json Moq
 
@@ -27,19 +27,29 @@ if "%1"=="" goto:help
 :while
 shift
 if "%0"=="/b" goto:build
+if "%0"=="/c" goto:commit
 if "%0"=="/h" goto:help
 if "%0"=="/i" goto:install-dependencies
+if "%0"=="/r" goto:run
 if "%0"=="/t" goto:test
 if "%0"=="/u" goto:update-dependencies
-if "%0"=="/r" goto:run
 
 goto:end
 
 :: FUNCTIONS
 :build
-call:install-dependencies
+echo Installing dependencies...
+(for %%d in (%dependencies%) do (
+	start /b /d %nuget_location% nuget.exe install %%d -o packages|more
+)) >> %log%
 echo Building solution...
-%msbuild_location%\MSBuild %solution_location% >> %log%
+%msbuild_location%MSBuild %solution_location% >> %log%
+goto:while
+
+:commit
+echo Committing...
+%git_location%Git commit -m "Commit from AutoDeploy.bat on %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%"
+%git_location%Git commit -a
 goto:while
 
 :install-dependencies
@@ -51,8 +61,7 @@ goto:while
 
 :test
 echo Executing unit tests...
-cd /D %msbuild_location%
-MSTest /testcontainer:HTTPrequesterTests\bin\Debug\HTTPrequesterTests.dll
+%mstest_location%MSTest /testcontainer:HTTPrequesterTests\bin\Debug\HTTPrequesterTests.dll >> %log%
 goto:while
 
 :update-dependencies
@@ -62,18 +71,19 @@ goto:while
 
 :run
 echo Running solution...
-echo Sending a http request to %webservice_url%.
 echo Starting application %solution_location:~1,-5% >> %log%
-start /b /d "%solution_location:~1,-5%\bin\Debug\" HTTPrequester.exe %webservice_url% >> %log%
+start /b /d "%solution_location:~1,-5%\bin\Debug\" HTTPrequester.exe "http://145.24.222.160/DataFlowWebservice/api/positions?unitid=357566000058106" >> %log%
 goto:while
 
 :help
 echo Usage: AutoDeploy.bat [params]
 echo Available parameters:
 echo /b - Build
+echo /c - Commit
 echo /h - Help
 echo /i - Install-dependencies
 echo /r - Run
+echo /t - Execute Unit Tests
 echo /u - Update-dependencies
 goto:while
 
