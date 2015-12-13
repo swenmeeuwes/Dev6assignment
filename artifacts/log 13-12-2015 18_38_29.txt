@@ -1,0 +1,5 @@
+AutoDeploy.bat Log 
+18:38:29 zo 13-12-2015 
+---------------------------------------------- 
+Installing 'Newtonsoft.Json 7.0.1'.
+Successfully installed 'Newtonsoft.Json 7.0.1'.

@@ -13,4 +13,6 @@ D:\GitHub\Dev6assignment\HTTPrequester\bin\Debug\HTTPrequester.exe
 D:\GitHub\Dev6assignment\HTTPrequester\bin\Debug\HTTPrequester.pdb
 D:\GitHub\Dev6assignment\HTTPrequester\bin\Debug\Newtonsoft.Json.dll
 D:\GitHub\Dev6assignment\HTTPrequester\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\Dev6assignment\HTTPrequester\bin\Debug\Moq.dll
+D:\GitHub\Dev6assignment\HTTPrequester\bin\Debug\Moq.xml
 D:\GitHub\Dev6assignment\HTTPrequester\obj\Debug\HTTPrequester.csprojResolveAssemblyReference.cache

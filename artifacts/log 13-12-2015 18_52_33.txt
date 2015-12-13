@@ -1,0 +1,7 @@
+AutoDeploy.bat Log 
+18:52:33 zo 13-12-2015 
+---------------------------------------------- 
+Installing 'Moq 4.2.1510.2205'.
+Installing 'Newtonsoft.Json 7.0.1'.
+Successfully installed 'Moq 4.2.1510.2205'.
+Successfully installed 'Newtonsoft.Json 7.0.1'.

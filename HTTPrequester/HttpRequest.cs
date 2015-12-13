@@ -14,8 +14,6 @@ namespace HTTPrequester
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-            Console.WriteLine("Response status code: {0}.", response.StatusCode);
-
             return response;
         }
     }

@@ -12,20 +12,14 @@ namespace HTTPrequester
     {
         static void Main(string[] args)
         {
-            //try
-            //{
-            //    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(args[0]);
-
-            //    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            //    Console.WriteLine("Response status code: {0}.", response.StatusCode);
-
-            //    return response;
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine("Could not establish a connection");
-            //}
+            try
+            {
+                Console.WriteLine("Response status code: {0}.", new HttpRequest().Get(args[0]).StatusCode);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Could not establish a connection");
+            }
         }
     }
 }

@@ -1,0 +1,7 @@
+AutoDeploy.bat Log 
+19:31:05 zo 13-12-2015 
+---------------------------------------------- 
+Scanning for projects...
+Found 1 project with a packages.config file. (HTTPrequester)
+Looking for installed packages in 'packages'.
+Updating 'HTTPrequester'...

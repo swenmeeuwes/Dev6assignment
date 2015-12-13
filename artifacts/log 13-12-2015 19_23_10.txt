@@ -1,0 +1,5 @@
+AutoDeploy.bat Log 
+19:23:10 zo 13-12-2015 
+---------------------------------------------- 
+Starting application HTTPrequester 
+Response status code: OK.
