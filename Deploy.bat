@@ -16,12 +16,14 @@ SET dependencies=Newtonsoft.Json Moq
 :: VARIABLES
 SET log="%artifacts_dir%\logs\log %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%.txt"
 SET analysis="%artifacts_dir%\analysis\analysis %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%.txt"
+SET test="%artifacts_dir%\tests\test %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%.txt"
 
 :: MAIN
 :: Generate directories if they do not exist
 if not exist "%artifacts_dir%" mkdir %artifacts_dir%
 if not exist "%artifacts_dir%\logs" mkdir %artifacts_dir%\logs
 if not exist "%artifacts_dir%\analysis" mkdir %artifacts_dir%\analysis
+if not exist "%artifacts_dir%\tests" mkdir %artifacts_dir%\tests
 
 echo AutoDeploy.bat Log > %log%
 echo %time:~0,8% %date% >> %log%
@@ -106,7 +108,13 @@ goto:while
 
 :test
 echo Executing unit tests...
-%mstest_location%MSTest /testcontainer:HTTPrequesterTests\bin\Debug\HTTPrequesterTests.dll >> %log%
+echo Executing unit tests... >> %log%
+echo Outputting test in %test% >> %log%
+echo AutoDeploy.bat Test > %test%
+echo %time:~0,8% %date% >> %test%
+echo ---------------------------------------------- >> %test%
+%mstest_location%MSTest /testcontainer:HTTPrequesterTests\bin\Debug\HTTPrequesterTests.dll >> %test%
+echo Check your artifacts directory for the test!
 goto:while
 
 :update-dependencies
