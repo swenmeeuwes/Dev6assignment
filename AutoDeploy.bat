@@ -10,7 +10,7 @@ SET solution_location="HTTPrequester.sln"
 SET nuget_location="%~dp0\"
 SET mstest_location="D:\MicrosoftVisualStudio\Common7\IDE\"
 SET git_location="C:\Program Files (x86)\Git\bin\"
-SET artifacts_dir="artifacts"
+SET artifacts_dir="..\artifacts"
 SET dependencies=Newtonsoft.Json Moq
 
 :: VARIABLES
