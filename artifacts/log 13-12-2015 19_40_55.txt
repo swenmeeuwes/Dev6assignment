@@ -1,0 +1,66 @@
+AutoDeploy.bat Log 
+19:40:55 zo 13-12-2015 
+---------------------------------------------- 
+Microsoft (R) Test Execution Command Line Tool Version 12.0.21005.1
+Copyright (c) Microsoft Corporation. All rights reserved.
+    
+Loading HTTPrequesterTests\bin\Debug\HTTPrequesterTests.dll...
+Starting execution...
+
+Results               Top Level Tests
+-------               ---------------
+Passed                HTTPrequester.Tests.HttpRequestTests.GetTest
+1/1 test(s) Passed
+
+Summary
+-------
+Test Run Completed.
+  Passed  1
+  ---------
+  Total   1
+Results file:  D:\GitHub\Dev6assignment\TestResults\swenm_000_SWENPC 2015-12-13 19_40_55.trx
+Test Settings: Default Test Settings
+'Newtonsoft.Json 7.0.1' already installed.
+
+'Moq 4.2.1510.2205' already installed.
+
+Microsoft (R) Build Engine versie 4.6.79.0
+[Microsoft .NET Framework versie 4.0.30319.42000]
+Copyright (C) Microsoft Corporation. Alle rechten voorbehouden.
+
+De projecten in deze oplossingen worden ‚‚n voor ‚‚n opgebouwd. Als u parallelle bouwbewerkingen wilt inschakelen, gebruikt u de schakeloptie /m.
+Opbouwen gestart 13-12-2015 19:40:59.
+Project D:\GitHub\Dev6assignment\HTTPrequester.sln op knooppunt 1 (standaarddoelen).
+ValidateSolutionConfiguration:
+  Oplossingsconfiguratie Debug|Any CPU wordt opgebouwd.
+D:\GitHub\Dev6assignment\HTTPrequester\HTTPrequester.csproj (2) op knooppunt 1 wordt gebouwd met project D:\GitHub\Dev6assignment\HTTPrequester.sln (1) (standaarddoelen).
+GenerateTargetFrameworkMonikerAttribute:
+Doel GenerateTargetFrameworkMonikerAttribute wordt overgeslagen omdat alle uitvoerbestanden actueel zijn ten opzichte van de invoerbestanden.
+CoreCompile:
+Doel CoreCompile wordt overgeslagen omdat alle uitvoerbestanden actueel zijn ten opzichte van de invoerbestanden.
+_CopyAppConfigFile:
+Doel _CopyAppConfigFile wordt overgeslagen omdat alle uitvoerbestanden actueel zijn ten opzichte van de invoerbestanden.
+CopyFilesToOutputDirectory:
+  HTTPrequester -> D:\GitHub\Dev6assignment\HTTPrequester\bin\Debug\HTTPrequester.exe
+Project D:\GitHub\Dev6assignment\HTTPrequester\HTTPrequester.csproj is gebouwd (standaarddoelen).
+D:\GitHub\Dev6assignment\HTTPrequesterTests\HTTPrequesterTests.csproj (3) op knooppunt 1 wordt gebouwd met project D:\GitHub\Dev6assignment\HTTPrequester.sln (1) (standaarddoelen).
+GenerateTargetFrameworkMonikerAttribute:
+Doel GenerateTargetFrameworkMonikerAttribute wordt overgeslagen omdat alle uitvoerbestanden actueel zijn ten opzichte van de invoerbestanden.
+CoreCompile:
+Doel CoreCompile wordt overgeslagen omdat alle uitvoerbestanden actueel zijn ten opzichte van de invoerbestanden.
+CopyFilesToOutputDirectory:
+  HTTPrequesterTests -> D:\GitHub\Dev6assignment\HTTPrequesterTests\bin\Debug\HTTPrequesterTests.dll
+Project D:\GitHub\Dev6assignment\HTTPrequesterTests\HTTPrequesterTests.csproj is gebouwd (standaarddoelen).
+Project D:\GitHub\Dev6assignment\HTTPrequester.sln is gebouwd (standaarddoelen).
+
+Opbouwen voltooid.
+    0 waarschuwing(en)
+    0 fout(en)
+
+Verstreken tijd 00:00:00.43
+Scanning for projects...
+Found 1 project with a packages.config file. (HTTPrequester)
+Looking for installed packages in 'packages'.
+Updating 'HTTPrequester'...
+Starting application HTTPrequester 
+Response status code: OK.
