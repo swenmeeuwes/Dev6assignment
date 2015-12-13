@@ -10,14 +10,20 @@ SET solution_location="HTTPrequester.sln"
 SET nuget_location="%~dp0\"
 SET mstest_location="D:\MicrosoftVisualStudio\Common7\IDE\"
 SET git_location="C:\Program Files (x86)\Git\bin\"
+SET fxcopcmd_location="D:\MicrosoftVisualStudio\Team Tools\Static Analysis Tools\FxCop\"
 SET artifacts_dir="..\Artifacts"
 SET dependencies=Newtonsoft.Json Moq
 
 :: VARIABLES
-SET log="%artifacts_dir%\log %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%.txt"
+SET log="%artifacts_dir%\logs\log %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%.txt"
+SET analysis="%artifacts_dir%\analysis\analysis %date:~3,10% %time:~0,2%_%time:~3,2%_%time:~6,2%.txt"
 
 :: MAIN
+:: Generate directories if they do not exist
 if not exist "%artifacts_dir%" mkdir %artifacts_dir%
+if not exist "%artifacts_dir%\logs" mkdir %artifacts_dir%\logs
+if not exist "%artifacts_dir%\analysis" mkdir %artifacts_dir%\analysis
+
 echo AutoDeploy.bat Log > %log%
 echo %time:~0,8% %date% >> %log%
 echo ---------------------------------------------- >> %log%
@@ -26,6 +32,7 @@ if "%1"=="" goto:help
 
 :while
 shift
+if "%0"=="/a" goto:analyse
 if "%0"=="/b" goto:build
 if "%0"=="/c" goto:git-commit
 if "%0"=="/h" goto:help
@@ -38,6 +45,17 @@ if "%0"=="/u" goto:update-dependencies
 goto:end
 
 :: FUNCTIONS
+:analyse
+echo Running code analysis...
+echo Running code analysis... >> %log%
+echo Outputting analysis in %analysis% >> %log%
+echo AutoDeploy.bat Analysis > %analysis%
+echo %time:~0,8% %date% >> %analysis%
+echo ---------------------------------------------- >> %analysis%
+%fxcopcmd_location%FxCopCmd /c  /f:"%solution_location:~1,-5%\bin\Debug\%solution_location:~1,-5%.exe" >> %analysis%
+echo Check your artifacts directory for the analysis!
+goto:while
+
 :build
 echo Installing dependencies...
 (for %%d in (%dependencies%) do (
@@ -61,6 +79,7 @@ goto:while
 :help
 echo Usage: AutoDeploy.bat [params]
 echo Available parameters:
+echo /a - Run code analysis
 echo /b - Build
 echo /c - Git-Commit
 echo /p - Git-Push

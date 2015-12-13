@@ -1,4 +1,0 @@
-AutoDeploy.bat Log 
-19:21:57 zo 13-12-2015 
----------------------------------------------- 
-Response status code: OK.

@@ -1,6 +1,0 @@
-AutoDeploy.bat Log 
-19:56:39 zo 13-12-2015 
----------------------------------------------- 
-[master eec61c1] Commit from AutoDeploy.bat on 13-12-2015 19_56_39
- 2 files changed, 5 insertions(+), 2 deletions(-)
- create mode 100644 artifacts/log 13-12-2015 19_56_39.txt

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8669ee57-7bba-4244-84e1-d8eefb2032de" name="swenm_000@SWENPC 2015-12-13 21:08:50" runUser="SWENPC\swenm_000" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="22224dcd-1e72-41e7-aba3-077120084072">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="swenm_000_SWENPC 2015-12-13 21_08_50" />
+    <Properties />
+  </TestSettings>
+  <Times creation="2015-12-13T21:08:50.0904674+01:00" queuing="2015-12-13T21:08:50.3036606+01:00" start="2015-12-13T21:08:50.3467022+01:00" finish="2015-12-13T21:08:53.2509453+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetTest" storage="httprequestertests\bin\debug\httprequestertests.dll" id="1e83fd17-513a-f8c9-a6a4-7784c3efde41">
+      <Execution id="6e7df925-23e4-44c0-b3ee-f4127e94d01d" />
+      <TestMethod codeBase="D:/GitHub/Dev6assignment/HTTPrequesterTests/bin/Debug/HTTPrequesterTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HTTPrequester.Tests.HttpRequestTests, HTTPrequesterTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="1e83fd17-513a-f8c9-a6a4-7784c3efde41" executionId="6e7df925-23e4-44c0-b3ee-f4127e94d01d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="6e7df925-23e4-44c0-b3ee-f4127e94d01d" testId="1e83fd17-513a-f8c9-a6a4-7784c3efde41" testName="GetTest" computerName="SWENPC" duration="00:00:02.6945399" startTime="2015-12-13T21:08:50.3647305+01:00" endTime="2015-12-13T21:08:53.2249195+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e7df925-23e4-44c0-b3ee-f4127e94d01d">
+    </UnitTestResult>
+  </Results>
+</TestRun>
