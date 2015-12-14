@@ -7,9 +7,9 @@
 SET msbuild_location="C:\Windows\Microsoft.NET\Framework\v4.0.30319\"
 SET solution_location="HTTPrequester.sln"
 SET nuget_location="%~dp0\"
-SET mstest_location="D:\MicrosoftVisualStudio\Common7\IDE\"
-SET git_location="C:\Program Files (x86)\Git\bin\"
-SET fxcopcmd_location="D:\MicrosoftVisualStudio\Team Tools\Static Analysis Tools\FxCop\"
+SET mstest_location="D:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\"
+SET git_location="D:\Git\bin\"
+SET fxcopcmd_location="D:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\FxCop\"
 SET artifacts_dir="..\Artifacts"
 SET dependencies=Newtonsoft.Json Moq
 

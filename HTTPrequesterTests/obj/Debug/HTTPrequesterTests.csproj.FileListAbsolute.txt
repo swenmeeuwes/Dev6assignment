@@ -5,3 +5,10 @@ D:\GitHub\Dev6assignment\HTTPrequesterTests\bin\Debug\HTTPrequester.pdb
 D:\GitHub\Dev6assignment\HTTPrequesterTests\obj\Debug\HTTPrequesterTests.csprojResolveAssemblyReference.cache
 D:\GitHub\Dev6assignment\HTTPrequesterTests\obj\Debug\HTTPrequesterTests.dll
 D:\GitHub\Dev6assignment\HTTPrequesterTests\obj\Debug\HTTPrequesterTests.pdb
+F:\Github\Dev\Dev6assignment\HTTPrequesterTests\bin\Debug\HTTPrequesterTests.dll
+F:\Github\Dev\Dev6assignment\HTTPrequesterTests\bin\Debug\HTTPrequesterTests.pdb
+F:\Github\Dev\Dev6assignment\HTTPrequesterTests\bin\Debug\HTTPrequester.exe
+F:\Github\Dev\Dev6assignment\HTTPrequesterTests\bin\Debug\HTTPrequester.pdb
+F:\Github\Dev\Dev6assignment\HTTPrequesterTests\obj\Debug\HTTPrequesterTests.csprojResolveAssemblyReference.cache
+F:\Github\Dev\Dev6assignment\HTTPrequesterTests\obj\Debug\HTTPrequesterTests.dll
+F:\Github\Dev\Dev6assignment\HTTPrequesterTests\obj\Debug\HTTPrequesterTests.pdb
